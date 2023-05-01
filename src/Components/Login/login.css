@@ -1,0 +1,168 @@
+.mainLogincontainer{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(22,22,35);
+}
+
+.loginContainer{
+    width: 65%;
+    height: 75%;
+    display: flex;
+    border-radius: 20px;
+    box-shadow: 0 0 15px 1px black;
+}
+
+.leftContainer{
+    height: 100%;
+    width: 40%;
+    display: flex;
+    position: relative;
+    border-radius: 20px;
+}
+
+.blackShadow{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.518);
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    top: 0;
+    left: 0;
+}
+
+.leftContainer img{
+    height: 100%;
+    width: 100%;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+
+}
+
+.rightContainer{
+    height: 100%;
+    width: 60%;
+    background-color: green;
+    padding: 1rem 2.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background-color: rgb(31,31,45);
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.inputBox1{
+    display: flex;
+    gap: 10px;
+    width: 100%;
+}
+
+.inputBox1 input:hover{
+    border: 2px solid rgb(240,35,60);
+}
+
+.leftInput{
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    width: 70%;
+}
+
+
+
+.inputBox{
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+}
+
+.inputContainer label{
+    color: white;
+}
+
+
+.leftInput input{
+    height: 2rem;
+    border-radius: 10px;
+    border: none;
+    background-color: transparent;
+    border: 2px solid rgb(83,84,96);
+    color: white;
+    padding: 0 10px;
+}
+
+.rightInput{
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    width: 30%;
+}
+
+.rightInput input{
+    height: 2rem;
+    border-radius: 10px;
+    border: none;
+    background-color: transparent;
+    border: 2px solid rgb(83,84,96);
+    color: white;
+    padding: 0 10px;
+}
+
+.inputBox input{
+    height: 2rem;
+    width: 100%;
+    border-radius: 10px;
+    border: none;
+    background-color: transparent;
+    border: 2px solid rgb(83,84,96);
+    color: white;
+    padding: 0 10px;
+}
+
+.inputBox input:hover{
+    border: 2px solid rgb(240,35,60);
+}
+
+
+
+
+.inputContainer{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.forgotPassword{
+    text-align: end;
+}
+
+.inputContainer button{
+    height: 2rem;
+    width: 100%;
+    background-color: rgb(240,35,60);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.gray{
+    color: rgb(83,84,96);
+}
+
+.heading{
+    color: white;
+}
+
+.lastP{
+    color: white;
+    text-align: center;
+}
+
+.lastP span{
+    color: rgb(240,35,60);
+}

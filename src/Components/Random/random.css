@@ -1,0 +1,71 @@
+.random {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 1rem 1.2rem;
+}
+
+.cards {
+  height: 100%;
+  width: 200px;
+}
+
+.cards img {
+  height: 100%;
+}
+
+.popularContainer {
+  height: 40vh;
+  width: 100%;
+  display: flex;
+  gap: 30px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 0 2rem;
+  display: flex;
+  gap: 30px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 0 2rem;
+}
+
+.upcomingContainer {
+  height: 40vh;
+  width: 100%;
+  display: flex;
+  gap: 30px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 0 2rem;
+}
+
+.topRatedContainer {
+  height: 40vh;
+  width: 100%;
+  display: flex;
+  gap: 30px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 0 2rem;
+}
+
+.comedyContainer {
+  height: 40vh;
+  width: 100%;
+  display: flex;
+  gap: 30px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 0 2rem;
+}
+
+.actionContainer {
+  height: 40vh;
+  width: 100%;
+  display: flex;
+  gap: 30px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 0 2rem;
+}

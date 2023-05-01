@@ -1,0 +1,16 @@
+.home{
+    width: 100%;
+    position: relative;
+    display: flex;
+    overflow-x: hidden;
+}
+
+.leftSide{
+    height: 100%;
+    width: 15%;
+}
+
+.contentContainer{
+    width: 85%;
+    background-color: rgb(25,24,31);
+}
