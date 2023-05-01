@@ -9,9 +9,9 @@ const Allmovies = () => {
     })
   return (
     <div className='random'>
-        <h1>Popular</h1>
+        <h1 className='movieHeading'>Popular</h1>
         <div className="popularContainer">
-                {movies.popular ? movies.popular.map((movie) => {
+                {movies.popular.length !== 0 ? movies.popular.map((movie) => {
                     console.log(movie,"Populat");
                     return (
                         <Link  to={`/moviedetails/${movie.id}`}>
@@ -20,9 +20,9 @@ const Allmovies = () => {
                         </div>
                         </Link>
                     )
-                }) : "Server Problem"}
+                }) : <h2 className='alert'>Unable to show data.Please try after sometime.Sorry for inconvenience.</h2>}
         </div>
-        <h1>Upcoming</h1>
+        <h1 className='movieHeading'>Upcoming</h1>
 
         <div className="upcomingContainer">
         {movies.upcoming.length !== 0 ? movies.upcoming.map((movie) => {
@@ -33,12 +33,12 @@ const Allmovies = () => {
                         </div>
                         </Link>
                     )
-                }) : <h1>Data Error</h1>}
+                }) : <h2 className='alert'>Unable to show data.Please try after sometime.Sorry for inconvenience.</h2>}
         </div>
-        <h1>Top-Rated</h1>
+        <h1 className='movieHeading'>Top-Rated</h1>
 
         <div className="topRatedContainer">
-        {movies.top_rated ? movies.top_rated.map((movie) => {
+        {movies.top_rated.length !== 0 ? movies.top_rated.map((movie) => {
                     return (
                         <Link to={`/moviedetails/${movie.id}`}>
                         <div className="cards">
@@ -46,12 +46,12 @@ const Allmovies = () => {
                     </div>
                         </Link>
                     )
-                }) : "Server Problem"}
+                }) : <h2 className='alert'>Unable to show data.Please try after sometime.Sorry for inconvenience.</h2>}
         </div>
-        <h1>Comedy</h1>
+        <h1 className='movieHeading'>Comedy</h1>
 
         <div className="comedyContainer">
-        {movies.comedy ? movies.comedy.map((movie) => {
+        {movies.comedy.length !== 0 ? movies.comedy.map((movie) => {
                     return (
                         <Link to={`/moviedetails/${movie.id}`}>
                         <div className="cards">
@@ -59,12 +59,12 @@ const Allmovies = () => {
                         </div>
                         </Link>
                     )
-                }) : "Server Problem"}
+                }) : <h2 className='alert'>Unable to show data.Please try after sometime.Sorry for inconvenience.</h2>}
         </div>
-        <h1>Action</h1>
+        <h1 className='movieHeading'>Action</h1>
 
         <div className="actionContainer">
-        {movies.action ? movies.action.map((movie) => {
+        {movies.action.length !== 0 ? movies.action.map((movie) => {
                     return (
                         <Link to={`/moviedetails/${movie.id}`}>
                         <div className="cards">
@@ -72,7 +72,7 @@ const Allmovies = () => {
                         </div>
                         </Link>
                     )
-                }) : "Server Problem"}
+                }) : <h2 className='alert'>Unable to show data.Please try after sometime.Sorry for inconvenience.</h2>}
         </div>
     </div>
   )}

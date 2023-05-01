@@ -24,7 +24,7 @@ const Popular = ({heading}) => {
                         </Link>
                     )
     
-                    }) : "Hello"
+                    }) : <h2>Unable to show data.Please try after sometime.Sorry for inconvenience.</h2>
             }
 
         </div>

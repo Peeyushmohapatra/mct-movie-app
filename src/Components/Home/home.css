@@ -1,9 +1,22 @@
 .home{
     width: 100%;
-    position: relative;
     display: flex;
     overflow-x: hidden;
 }
+
+.home::-webkit-scrollbar {
+    width: 12px;               /* width of the entire scrollbar */
+  }
+  
+  .home::-webkit-scrollbar-track {
+    background: black;        /* color of the tracking area */
+  }
+  
+  .home::-webkit-scrollbar-thumb {
+    background-color: blue;    /* color of the scroll thumb */
+    border-radius: 20px;       /* roundness of the scroll thumb */
+    border: 3px solid black;  /* creates padding around scroll thumb */
+  }
 
 .leftSide{
     height: 100%;
@@ -14,3 +27,18 @@
     width: 85%;
     background-color: rgb(25,24,31);
 }
+
+
+.contentContainer::-webkit-scrollbar {
+    width: 12px;               /* width of the entire scrollbar */
+  }
+  
+  .contentContainer::-webkit-scrollbar-track {
+    background: black;        /* color of the tracking area */
+  }
+  
+  .contentContainer::-webkit-scrollbar-thumb {
+    background-color: blue;    /* color of the scroll thumb */
+    border-radius: 20px;       /* roundness of the scroll thumb */
+    border: 3px solid black;  /* creates padding around scroll thumb */
+  }
