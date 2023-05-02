@@ -18,7 +18,7 @@ const Search = () => {
 
   useEffect(() => {
       setSearchmovie(movies.filter((ele) => {
-        if(ele.original_title.includes(movieName)){
+        if(ele.original_title.toUpperCase().includes(movieName.toUpperCase())){
             return ele
         } 
       }))
@@ -28,9 +28,8 @@ const Search = () => {
 
   return (
     <div className="searchDiv" >
-        <h1 style={{textAlign:"center"}}>Searching For: {movieName}</h1>
+        <h1 style={{textAlign:"center",color:"rgb(13,154,252)",fontFamily:"Arial"}}>Result For: {movieName}</h1>
       <div className="movieCardContainer">
-      
         {searchMovies.length > 0 ? searchMovies.map((movie) => {
             return (
                 <Link to={`/moviedetails/${movie.id}`}>

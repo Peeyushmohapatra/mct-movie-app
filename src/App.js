@@ -10,11 +10,12 @@ import Allmovies from "./Components/AllMovies/Allmovies";
 import Comedy from "./Components/Comedy/Comedy";
 import Popular from "./Components/Popular/Popular";
 import Toprated from "./Components/Top_Rated/Toprated";
-import { Protected } from "./Components/Protected/Protect";
 import Pagenotfound from "./Components/PageNotFound/Pagenotfound";
 import Navber from "./Components/Navbar/Navber";
 import Search from "./Components/Search/Search";
 import Moviedetails from "./Components/MoveiDetails/Moviedetails";
+import { actionData, comedyData, populatData, topRatedData, upcomingData } from "./functions";
+
 
 
 function App() {
@@ -26,75 +27,14 @@ function App() {
 
   useEffect(() => {
     if(data.popular.length === 0 && data.top_rated.length === 0 && data.upcoming.length === 0){
-      populatData();
-      topRatedData();
-      upcomingData();
-      comedyData();
-      actionData();
-      dispatch({
-        type:'login',
-        data:login
-      })
+      populatData(dispatch);
+      topRatedData(dispatch);
+      upcomingData(dispatch);
+      comedyData(dispatch);
+      actionData(dispatch);
     }
   }, []);
 
-  const populatData = async () => {
-    const api = await fetch(
-      "https://api.themoviedb.org/3/movie/popular?api_key=4e44d9029b1270a757cddc766a1bcb63"
-    );
-    const resp = await api.text();
-    const jsonData = JSON.parse(resp);
-    dispatch({
-      type: "populardata",
-      data: jsonData.results,
-    });
-  };
-
-  const upcomingData = async () => {
-    const api = await fetch(
-      "https://api.themoviedb.org/3/movie/upcoming?api_key=4e44d9029b1270a757cddc766a1bcb63"
-    );
-    const resp = await api.text();
-    const jsonData = JSON.parse(resp);
-
-    dispatch({
-      type: "upcomingData",
-      data: jsonData.results,
-    });
-  };
-
-  const topRatedData = async () => {
-    const api = await fetch("https://api.themoviedb.org/3/movie/top_rated?api_key=4e44d9029b1270a757cddc766a1bcb63");
-    const resp = await api.text();
-    const jsonData = JSON.parse(resp);
-
-    dispatch({
-      type: "topRatedData",
-      data: jsonData.results,
-    });
-  };
-
-  const comedyData = async () => {
-    const api = await fetch("https://api.themoviedb.org/3/search/movie?api_key=4e44d9029b1270a757cddc766a1bcb63&query=comedy");
-    const resp = await api.text();
-    const jsonData = JSON.parse(resp);
-
-    dispatch({
-      type: "comedyData",
-      data: jsonData.results,
-    });
-  };
-
-  const actionData = async () => {
-    const api = await fetch("https://api.themoviedb.org/3/search/movie?api_key=4e44d9029b1270a757cddc766a1bcb63&query=action");
-    const resp = await api.text();
-    const jsonData = JSON.parse(resp);
-
-    dispatch({
-      type: "actionData",
-      data: jsonData.results,
-    });
-  };
 
   const [login,setLogin] = useState(false)
 
@@ -108,9 +48,7 @@ function App() {
         <Route path="/search/:movieName" element={<Search/>} /> 
         <Route path="/moviedetails/:details" element={<Moviedetails/>} /> 
 
-
         <Route path="/home"  element={login ? <Home/> : <Navigate to="/"/>} >
-          
           <Route path=""  element={<Navigate to="all" />} />
           <Route path="action"  element={<Action/>} />
           <Route path="upcoming"  element={<Upcoming/>}/>
@@ -119,8 +57,8 @@ function App() {
           <Route path="popular"  element={<Popular/>}/>
           <Route path="toprated"  element={<Toprated/>}/>
         </Route>
+
         <Route path="/*" element={<Pagenotfound/>} /> 
-        
       </Routes>
 
     </div>

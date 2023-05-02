@@ -21,6 +21,7 @@
     opacity: 0;
     transition: opacity 0.3s;
     color: rgb(13, 154, 252);
+    font-family: Segoe UI;
   }
   
   .cardOverlay:hover {

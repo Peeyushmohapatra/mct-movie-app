@@ -39,12 +39,5 @@ export const reducer = (state = { popular:[], top_rated:[], upcoming:[],comedy:[
         }
     }
 
-    else if(action.type === "login"){
-        return {
-            ...state,
-            login:action.data
-        }
-    }
-
     return state
 }

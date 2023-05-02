@@ -50,6 +50,8 @@
 }
 
 .popularContainer {
+  height: 45vh;
+
   width: 100%;
   display: flex;
   gap: 30px;
@@ -73,6 +75,8 @@
 }
 
 .upcomingContainer {
+  height: 45vh;
+
   width: 100%;
   display: flex;
   gap: 30px;
@@ -179,6 +183,7 @@
 
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  text-align: center;
 }
 
 

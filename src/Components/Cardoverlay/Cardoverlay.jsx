@@ -6,7 +6,8 @@ const Cardoverlay = ({movie}) => {
   return (
     <div className="cardOverlay">
     <div className="card_Title">
-      {movie && movie.original_title}
+      <h3>{movie && movie.original_title}</h3>
+      
     </div>
     <div className="posterImageReleasingDateRating">
         <span><i className="fa-solid fa-calendar-days"></i> {movie && movie.release_date}</span>
