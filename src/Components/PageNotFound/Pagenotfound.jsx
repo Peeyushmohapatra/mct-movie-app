@@ -12,6 +12,7 @@ const Pagenotfound = ({setLogin}) => {
       <p className='pTwo'>message <span className='span'>=</span> <span className='spanOne'>"page not found";</span></p>
       
       <button className='backButton' onClick={() => {
+        setLogin(true)
         navigate("/home")
       }}>Home</button>
     </div>
