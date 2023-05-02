@@ -60,7 +60,7 @@ function App() {
           <Route path="toprated"  element={<Toprated/>}/>
         </Route>
 
-        <Route path="/*" element={<Pagenotfound/>} /> 
+        <Route path="/*" element={<Pagenotfound setLogin={setLogin}/>} /> 
       </Routes>
 
     </div>
