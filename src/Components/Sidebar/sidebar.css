@@ -19,6 +19,10 @@
     color: rgb(13, 154, 252);
 }
 
+.active:hover{
+    color: rgb(240,35,60);
+}
+
 a{
     color: white;
     text-decoration:none

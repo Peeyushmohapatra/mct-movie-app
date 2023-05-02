@@ -1,0 +1,58 @@
+.wrongPage{
+    height: 89vh;
+    width: 100%;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.fa-brackets-round{
+    color: black;
+}
+
+.wrongPathheading{
+    color: white;
+    font-size: 5rem;
+}
+
+.wrongPathheading span{
+    color: white;
+}
+
+.pOne{
+    color: rgb(33,150,243);
+    font-size: 2rem;
+
+}
+
+.pOne span{
+    color: white;
+
+}
+
+.pTwo{
+    color: rgb(185,90,102);
+    font-size: 2rem;
+
+}
+
+.span{
+    color: white;
+}
+
+.spanOne{
+    color: rgb(123,160,102);
+}
+
+.backButton{
+    height: 2rem;
+    width: 120px;
+    border: none;
+    border-radius: 12px;
+    background-color: rgb(25,24,31);
+    cursor: pointer;
+    color: white;
+}
