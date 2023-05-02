@@ -2,6 +2,7 @@
     width: 100%;
     display: flex;
     overflow-x: hidden;
+
 }
 
 .home::-webkit-scrollbar {
@@ -26,6 +27,7 @@
 .contentContainer{
     width: 85%;
     background-color: rgb(25,24,31);
+    border-radius: 20px;
 }
 
 

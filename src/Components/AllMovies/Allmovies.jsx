@@ -11,6 +11,7 @@ const Allmovies = () => {
   return (
     <div className='random'>
         <h1 className='movieHeading'>Popular Movies</h1>
+        
         <div className="popularContainer">
                 {movies.popular.length !== 0 ? movies.popular.map((movie) => {
                     return (
@@ -24,6 +25,8 @@ const Allmovies = () => {
                 }) : <h2 className='alert'>Please Wait <i className="fa-solid fa-spinner-third fa-spin"></i></h2>}
         </div>
         <h1 className='movieHeading'>Upcoming Movies</h1>
+
+
 
         <div className="upcomingContainer">
         {movies.upcoming.length !== 0 ? movies.upcoming.map((movie) => {
@@ -62,7 +65,6 @@ const Allmovies = () => {
                         <div key={movie.id} className="cardss">
                         <img src={`https://image.tmdb.org/t/p/original/${movie && movie.poster_path}`} alt="" />
                         <Cardoverlay movie={movie} />
-
                         </div>
                         </Link>
                     )
