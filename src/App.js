@@ -100,9 +100,6 @@ function App() {
 
   return (
     <div className="App">
-      {/* <Login/> */}
-      {/* <Home/> */}
-
       {login ? <Navber setLogin={setLogin}/> : null}
 
 

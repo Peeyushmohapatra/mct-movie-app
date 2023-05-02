@@ -7,7 +7,6 @@ const Navber = ({setLogin}) => {
     const [movieName,setMoviename] = useState("")
     const navigate = useNavigate()
     useEffect(() => {
-        console.log();
         setName(JSON.parse(localStorage.getItem("userInfo")))
     },[])
   return (
@@ -21,12 +20,16 @@ const Navber = ({setLogin}) => {
             <input onChange={(e) => {
                 setMoviename(e.target.value)
             }} placeholder='Search any movies' type="text" />
-            <Link className='searchButton' to={`/search/${movieName}`}>
-            <button>Search</button>
+            <Link className='searchButton' to={movieName ? `/search/${movieName}` : "/home"}>
+            <button onClick={() => {
+                if(movieName === ""){
+                    alert("Enter movie name !!")
+                }
+            }}>Search</button>
             </Link>
         </div>
         <div className="logoutContainer">
-            <p>Welcome : {name.name !== "Unknown" && name.name}</p>
+            <p className='usersDetails'>Welcome : <b>{name.name !== "Unknown" && name.name}</b></p>
             <button onClick={() => {
                 setLogin(false)
                 navigate("/")

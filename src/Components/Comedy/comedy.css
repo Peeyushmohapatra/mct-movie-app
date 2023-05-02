@@ -2,3 +2,18 @@
     width: 100%;
     padding-top:2rem ;
 }
+
+
+.card{
+    position: relative;
+    border-radius: 15px;
+}
+
+.card img{
+    border-radius: 15px;
+}
+
+.heading{
+    font-family:cambria;
+    color: rgb(13,154,252);
+}

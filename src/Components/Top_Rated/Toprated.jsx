@@ -2,6 +2,7 @@ import React from 'react'
 import "./toprated.css"
 import { useSelector } from 'react-redux'
 import { Link } from "react-router-dom";
+import Cardoverlay from '../Cardoverlay/Cardoverlay';
 
 
 
@@ -11,7 +12,7 @@ const Toprated = ({heading}) => {
     })
   return (
     <div className='toprated'>
-         <h1 className='heading'>{heading}</h1>
+         <h1 className='heading'>Top Rated <i className="star fa-solid fa-star"></i></h1>
         <div className="movieCardContainer">
 
             {
@@ -19,13 +20,14 @@ const Toprated = ({heading}) => {
                     return (
                         <Link to={`/moviedetails/${movie.id}`}>
 
-                    <div className="card">
+                    <div key={movie.id} className="card">
                         <img src={`https://image.tmdb.org/t/p/original/${movie && movie.poster_path}`} alt="" />
+                        <Cardoverlay movie={movie} />
                     </div>
                         </Link>
                     )
     
-                    }) : "Hello"
+                    }) : <img className='loadingIcon' src='https://mir-s3-cdn-cf.behance.net/project_modules/fs/b6e0b072897469.5bf6e79950d23.gif' />
             }
 
         </div>

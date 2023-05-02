@@ -28,7 +28,6 @@ const Moviedetails = () => {
             return ele.id == details
         })
 
-        console.log(arr);
         setMymovie({
                 bigimage:arr[0].backdrop_path,
                 movieName:arr[0].original_title,
@@ -41,7 +40,6 @@ const Moviedetails = () => {
                 genres:"",
                 release:arr[0].release_date
         })
-        console.log(myMovie);
     },[details])
 
 
@@ -71,14 +69,14 @@ const Moviedetails = () => {
             <h2 className="movieTitle">{myMovie && myMovie.movieName}</h2>
             
             <p>
-              Release Date: <span>{myMovie && myMovie.release}</span>{" "}
+              Release Date: <span>{myMovie && myMovie.release}</span>
             </p>
             
 
             
 
             <p>
-              Rating: <span>{myMovie && myMovie.movieRating}</span>{" "}
+              Rating: <span>{myMovie.movieRating && myMovie.movieRating.toFixed(1)}</span>
             </p>
             <p>
               Description: <span>{myMovie && myMovie.discription}</span>

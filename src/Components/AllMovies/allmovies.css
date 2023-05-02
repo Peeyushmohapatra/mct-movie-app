@@ -36,23 +36,21 @@
   margin-top: 50px;
 }
 
-.cards {
+.cardss {
   height: 100%;
-  width: 200px;
+  width: 250px;
+  border-radius:10px;
+  position: relative;
 }
 
-.cards img {
+.cardss img {
   height: 100%;
+  border-radius:10px;
+  width: 100%;
 }
 
 .popularContainer {
-  height: 40vh;
   width: 100%;
-  display: flex;
-  gap: 30px;
-  overflow-x: auto;
-  overflow-y: hidden;
-  padding: 0 2rem;
   display: flex;
   gap: 30px;
   overflow-x: auto;
@@ -75,7 +73,6 @@
 }
 
 .upcomingContainer {
-  height: 40vh;
   width: 100%;
   display: flex;
   gap: 30px;
@@ -99,7 +96,7 @@
 }
 
 .topRatedContainer {
-  height: 40vh;
+  height: 45vh;
   width: 100%;
   display: flex;
   gap: 30px;
@@ -123,7 +120,7 @@
 }
 
 .comedyContainer {
-  height: 40vh;
+  height: 45vh;
   width: 100%;
   display: flex;
   gap: 30px;
@@ -147,7 +144,7 @@
 }
 
 .actionContainer {
-  height: 40vh;
+  height: 45vh;
   width: 100%;
   display: flex;
   gap: 30px;
@@ -187,4 +184,12 @@
 
 .alert{
   color: white;
+  text-align: center;
 }
+
+
+.fonticon{
+  color: white;
+}
+
+

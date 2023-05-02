@@ -3,6 +3,7 @@ import "./search.css";
 import { useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
+import Cardoverlay from "../Cardoverlay/Cardoverlay";
 
 
 const Search = () => {
@@ -36,6 +37,7 @@ const Search = () => {
 
                 <div className="card">
             <img src={`https://image.tmdb.org/t/p/original/${movie && movie.poster_path}`} alt="" />
+            <Cardoverlay movie={movie} />
         </div> 
                 </Link>
             )

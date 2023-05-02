@@ -2,6 +2,7 @@ import React from 'react'
 import "./allmovies.css"
 import { useSelector } from 'react-redux'
 import { Link } from 'react-router-dom'
+import Cardoverlay from '../Cardoverlay/Cardoverlay'
 
 const Allmovies = () => {
     const movies = useSelector((state) => {
@@ -12,15 +13,15 @@ const Allmovies = () => {
         <h1 className='movieHeading'>Popular</h1>
         <div className="popularContainer">
                 {movies.popular.length !== 0 ? movies.popular.map((movie) => {
-                    console.log(movie,"Populat");
                     return (
                         <Link  to={`/moviedetails/${movie.id}`}>
-                        <div className="cards">
+                        <div key={movie.id} className="cardss">
                         <img src={`https://image.tmdb.org/t/p/original/${movie && movie.poster_path}`} alt="" />
+                        <Cardoverlay movie={movie}  />
                         </div>
                         </Link>
                     )
-                }) : <h2 className='alert'>Unable to show data.Please try after sometime.Sorry for inconvenience.</h2>}
+                }) : <h2 className='alert'>Please Wait <i className="fa-solid fa-spinner-third fa-spin"></i></h2>}
         </div>
         <h1 className='movieHeading'>Upcoming</h1>
 
@@ -28,12 +29,14 @@ const Allmovies = () => {
         {movies.upcoming.length !== 0 ? movies.upcoming.map((movie) => {
                     return (
                         <Link to={`/moviedetails/${movie.id}`}>
-                        <div className="cards">
+                        <div key={movie.id} className="cardss">
                         <img src={`https://image.tmdb.org/t/p/original/${movie && movie.poster_path}`} alt="" />
+                        <Cardoverlay movie={movie} />
+
                         </div>
                         </Link>
                     )
-                }) : <h2 className='alert'>Unable to show data.Please try after sometime.Sorry for inconvenience.</h2>}
+                }) :<h2 className='alert'>Please Wait <i className="fa-solid fa-spinner-third fa-spin"></i></h2>}
         </div>
         <h1 className='movieHeading'>Top-Rated</h1>
 
@@ -41,12 +44,14 @@ const Allmovies = () => {
         {movies.top_rated.length !== 0 ? movies.top_rated.map((movie) => {
                     return (
                         <Link to={`/moviedetails/${movie.id}`}>
-                        <div className="cards">
+                        <div key={movie.id} className="cardss">
                         <img src={`https://image.tmdb.org/t/p/original/${movie && movie.poster_path}`} alt="" />
+                        <Cardoverlay movie={movie} />
+
                     </div>
                         </Link>
                     )
-                }) : <h2 className='alert'>Unable to show data.Please try after sometime.Sorry for inconvenience.</h2>}
+                }) : <h2 className='alert'>Please Wait <i class="fa-duotone fa-spinner-third"></i></h2>}
         </div>
         <h1 className='movieHeading'>Comedy</h1>
 
@@ -54,12 +59,14 @@ const Allmovies = () => {
         {movies.comedy.length !== 0 ? movies.comedy.map((movie) => {
                     return (
                         <Link to={`/moviedetails/${movie.id}`}>
-                        <div className="cards">
+                        <div key={movie.id} className="cardss">
                         <img src={`https://image.tmdb.org/t/p/original/${movie && movie.poster_path}`} alt="" />
+                        <Cardoverlay movie={movie} />
+
                         </div>
                         </Link>
                     )
-                }) : <h2 className='alert'>Unable to show data.Please try after sometime.Sorry for inconvenience.</h2>}
+                }) : <h2 className='alert'>Please Wait <i className="fa-solid fa-spinner-third fa-spin"></i></h2>}
         </div>
         <h1 className='movieHeading'>Action</h1>
 
@@ -67,12 +74,13 @@ const Allmovies = () => {
         {movies.action.length !== 0 ? movies.action.map((movie) => {
                     return (
                         <Link to={`/moviedetails/${movie.id}`}>
-                        <div className="cards">
+                        <div key={movie.id} className="cardss">
                         <img src={`https://image.tmdb.org/t/p/original/${movie && movie.poster_path}`} alt="" />
+                         <Cardoverlay movie={movie} />
                         </div>
                         </Link>
                     )
-                }) : <h2 className='alert'>Unable to show data.Please try after sometime.Sorry for inconvenience.</h2>}
+                }) : <h2 className='alert'>Please Wait <i className="fa-solid fa-spinner-third fa-spin"></i></h2>}
         </div>
     </div>
   )}

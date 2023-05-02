@@ -14,6 +14,7 @@ const Login = ({setLogin}) => {
         if(state.name !== "" && state.age !== "" && state.email === "admin@gmail.com" && state.password === "abcd@1234"){
             return true
         }else{
+            alert("Invalid Username and Password")
             return false
         }
     }

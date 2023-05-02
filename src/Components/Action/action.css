@@ -1,3 +1,17 @@
 .action{
     width: 100%;
 }
+
+.card{
+    position: relative;
+    border-radius: 15px;
+}
+
+.card img{
+    border-radius: 15px;
+}
+
+#ninja{
+    color: rgb(93, 5, 5);
+}
+
