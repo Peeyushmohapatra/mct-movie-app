@@ -52,15 +52,15 @@ function App() {
 
         <Route path="/home"  element={login ? <Home/> : <Navigate to="/"/>} >
           <Route path=""  element={<Navigate to="all" />} />
-          <Route path="action"  element={<Action/>} />
-          <Route path="upcoming"  element={<Upcoming/>}/>
-          <Route path="all"  element={<Allmovies/>}/>
-          <Route path="comedy"  element={<Comedy/>}/>
-          <Route path="popular"  element={<Popular/>}/>
-          <Route path="toprated"  element={<Toprated/>}/>
+          <Route path="action"  element={login? <Action/> : <Navigate to="/"/>} />
+          <Route path="upcoming"  element={login ? <Upcoming/> : <Navigate to="/"/>}/>
+          <Route path="all"  element={login ? <Allmovies/> : <Navigate to="/"/>}/>
+          <Route path="comedy"  element={login ? <Comedy/> : <Navigate to="/"/>}/>
+          <Route path="popular"  element={login ? <Popular/> : <Navigate to="/"/>}/>
+          <Route path="toprated"  element={ login ? <Toprated/> : <Navigate to="/"/>}/>
         </Route>
 
-        <Route path="/*" element={<Pagenotfound setLogin={setLogin}/>} /> 
+        <Route path="*" element={ login ? <Pagenotfound setLogin={setLogin}/> : <Navigate to="/"/>} /> 
       </Routes>
 
     </div>
